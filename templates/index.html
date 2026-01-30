@@ -23,7 +23,7 @@
             <tbody>
                 {% for user in users %}
                 <tr>
-                    <td>{{ user.id }}</td>
+                    <td>{{ user.user_id }}</td>
                     <td>{{ user.name }}</td>
                     <td>{{ user.email }}</td>
                     <td>{{ user.institution }}</td>
@@ -33,8 +33,8 @@
                         <img src="{{ user.image_url }}" alt="User Image" class="w-16 h-16 rounded-full">
                     </td>
                     <td>
-                        <button class="btn btn-sm btn-warning" onclick="editUser({{ user.id }})">Edit</button>
-                        <button class="btn btn-sm btn-error" onclick="deleteUser({{ user.id }})">Delete</button>
+                        <button class="btn btn-sm btn-warning" onclick="editUser({{ user.user_id }})">Edit</button>
+                        <button class="btn btn-sm btn-error" onclick="deleteUser({{ user.user_id }})">Delete</button>
                     </td>
                 </tr>
                 {% endfor %}
